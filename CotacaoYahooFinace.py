@@ -8,3 +8,8 @@ import pandas_datareader.data as web
 
 import yfinance as yf
 yf.pdr_override()
+
+litecoin = web.get_data_yahoo('LTC-USD')
+litecoin.head()
+litecoin.tail()
+litecoin["Close"].plot(figsize=(22,8))
